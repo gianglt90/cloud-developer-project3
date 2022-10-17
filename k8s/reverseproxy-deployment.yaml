@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-        - image: gianglt90/reverseproxy
+        - image: gianglt90/reverseproxy:v1
           name: reverseproxy
           imagePullPolicy: Always
           resources:

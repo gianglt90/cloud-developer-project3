@@ -17,7 +17,7 @@ spec:
         api: external
     spec:
       containers:
-      - image: gianglt90/udagram-frontend:v9
+      - image: gianglt90/udagram-frontend:v2
         name: frontend
         imagePullPolicy: Always
         ports:
