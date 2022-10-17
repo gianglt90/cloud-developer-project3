@@ -17,7 +17,14 @@ spec:
       containers:
       - image: gianglt90/udagram-api-feed:v5
         name: backend-feed
-        imagePullPolicy: Always                
+        imagePullPolicy: Always         
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"        
         env:
         - name: URL
           valueFrom:
@@ -63,7 +70,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: env-secret
-              key: POSTGRES_USERNAME      
+              key: POSTGRES_USERNAME    
         volumeMounts:
         - name: aws-secret
           mountPath: "/root/.aws/"
